@@ -17,34 +17,79 @@
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
-      <nav class="theme-menu header__theme-menu">
-        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
-        <ul class="theme-menu__list">
-          <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
-              Темно
-            </button>
-          </li>
-          <li class="theme-menu__item">
-            <button
-              type="button"
-              data-theme="auto"
-              disabled
-              class="theme-menu__button"
+    <div class="container">
+      <header class="header">
+        <svg viewBox="0 0 325 43" fill="currentColor" class="html-logo">
+          <use href="/svg/HTML.svg#html-logo"></use>
+        </svg>
+        <h1 class="title">закрывающий тег</h1>
+        <nav class="theme-menu header__theme-menu">
+          <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+          <ul class="theme-menu__list">
+            <li class="theme-menu__item">
+              <button
+                type="button"
+                data-theme="dark"
+                class="theme-menu__button"
+              >
+                Темно
+              </button>
+            </li>
+            <li class="theme-menu__item">
+              <button
+                type="button"
+                data-theme="auto"
+                disabled
+                class="theme-menu__button"
+              >
+                Авто
+              </button>
+            </li>
+            <li class="theme-menu__item">
+              <button
+                type="button"
+                data-theme="light"
+                class="theme-menu__button"
+              >
+                Светло
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="content">
+          <h2 class="content__title">
+            Фритрек и нулевой спринт: Подготовка к работе
+          </h2>
+          <div class="image-container">
+            <svg
+              class="html-watermark"
+              viewBox="0 0 94 13"
+              width="94"
+              height="13"
             >
-              Авто
+              <use href="/svg/watermarks.svg#html-watermark"></use>
+            </svg>
+          </div>
+          <div class="text-block">
+            <p>
+              Это было самое начало пути. На этом этапе важно было проникнуться
+              основами и настроиться на учёбу. И, возможно, подумать, как новые
+              знания могут повлиять на ваше будущее.
+            </p>
+            <p>Место для ваших воспоминаний о начале обучения.</p>
+          </div>
+          <div class="like-section">
+            <button class="like-button">
+              <img src="иконка_сердца.png" alt="Иконка сердца" />
+              Like
             </button>
-          </li>
-          <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
-              Светло
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

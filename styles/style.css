@@ -23,4 +23,149 @@
   font-variation-settings: 'wght' var(--font-weight-body-light);
   background-color: var(--background-color);
   color: var(--accent-color);
+
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--stripe-color),
+      var(--stripe-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--stripe-color),
+      var(--stripe-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gradient-start) 0.01%,
+      var(--gradient-end) 100%
+    );
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 696px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  min-height: 368px;
+  border: 2px solid #000000;
+  margin-bottom: 100px;
+}
+
+.html-logo {
+  max-width: 455px;
+  padding-bottom: 20px;
+  fill: var(--accent-color);
+}
+
+.html-logo path {
+  fill: var(--accent-color);
+}
+
+.title {
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight-body-light);
+  font-size: 23px;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__item {
+  position: relative;
+}
+
+.theme-menu__item:active,
+.theme-menu__item:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__item:active:before {
+  content: url(/svg/▶.svg);
+  position: absolute;
+  width: 14px;
+  height: 14px;
+}
+
+.theme-menu__item:focus,
+.theme-menu__item:focus-visible {
+  outline: none;
+}
+
+.theme-menu__button {
+  background: none;
+  border: none;
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight-body-light);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
+.content {
+  background: #ffffff;
+}
+
+.content__title {
+  border: 2px solid #000000;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-heading-light);
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 6px;
+}
+
+.image-container {
+  background-image: url(/images/image.png);
+  background-position: center;
+  background-size: cover;
+  block-size: 696px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.html-watermark {
+  background-blend-mode: hard-light;
+  margin-top: 25px;
+  margin-right: 25px;
+  color: var(--accent-color);
+}
+
+.text-block {
+  padding: 25px;
+  border: 2px solid #000000;
+  border-bottom: none;
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-heading-light);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.like-section {
+  border: 2px solid #000000;
+  border-top: none;
+}
+
+@media (max-width: 375px) {
+  .header {
+    min-height: 327px;
+  }
 }
