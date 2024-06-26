@@ -120,52 +120,157 @@
   padding-left: 15px;
 }
 
-.content {
+.card {
   background: #ffffff;
+  margin-bottom: 50px;
+  border: 2px solid #000000;
 }
 
-.content__title {
-  border: 2px solid #000000;
+.card__title {
   font-family: var(--font-main);
   font-weight: var(--font-weight-heading-light);
   font-size: 18px;
   line-height: 22px;
-  padding-bottom: 6px;
-}
-
-.image-container {
-  background-image: url(/images/image.png);
-  background-position: center;
-  background-size: cover;
-  block-size: 696px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.html-watermark {
-  background-blend-mode: hard-light;
-  margin-top: 25px;
-  margin-right: 25px;
-  color: var(--accent-color);
+  padding-bottom: 2px;
 }
 
 .text-block {
   padding: 25px;
-  border: 2px solid #000000;
-  border-bottom: none;
   font-family: var(--font-main);
   font-weight: var(--font-weight-heading-light);
   font-size: 18px;
   line-height: 21px;
 }
 
-.like-section {
-  border: 2px solid #000000;
-  border-top: none;
+.text-block__paragraph {
+  padding-bottom: 27px;
 }
 
 @media (max-width: 375px) {
   .header {
     min-height: 327px;
   }
+}
+
+.image-wrapper {
+  position: relative;
+  text-align: center;
+  border: 2px solid #000000;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-blur {
+  filter: blur(15px);
+}
+
+.image-invert {
+  filter: invert(85%);
+}
+
+.image-sepia {
+  filter: sepia(0.9);
+}
+
+.image-hue-rotate {
+  filter: hue-rotate(25deg);
+}
+
+.image-saturate {
+  filter: saturate(400%);
+}
+
+.image-grayscale {
+  filter: grayscale(80%);
+}
+
+.image-mix {
+  filter: hue-rotate(80deg) invert(25%) blur(2px);
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  mix-blend-mode: hard-light;
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight-body-light);
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.5;
+  color: var(--label-color);
+  text-shadow: 1px 1px var(--label-text-stroke-color),
+    -1px -1px var(--label-text-stroke-color),
+    -1px 1px var(--label-text-stroke-color),
+    1px -1px var(--label-text-stroke-color);
+}
+
+@supports (-webkit-text-stroke: 1px var(--label-text-stroke-color)) {
+  .label {
+    -webkit-text-stroke: 1px var(--label-text-stroke-color);
+    text-shadow: none;
+  }
+}
+
+.card__like-button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.card__icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 2;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.like-icon.is-liked .heart-path {
+  fill: red;
+  stroke: none;
+}
+
+.card__icon-button:active .like-icon {
+  transform: scale(1.5);
+}
+
+.button__text {
+  display: inline-block;
+}
+
+@supports (-webkit-text-stroke: 1px var(--border-color)) {
+  h2,
+  p,
+  .card__like-button {
+    -webkit-text-stroke: 1px var(--border-color);
+  }
+}
+
+h2,
+p,
+.card__like-button {
+  text-shadow: 1px 1px var(--border-color), -1px -1px var(--border-color),
+    -1px 1px var(--border-color), 1px -1px var(--border-color);
 }

@@ -13,6 +13,8 @@
   --gradient-start: #e7e7e7;
   --gradient-end: #1a1a1a;
   --stripe-color: #d3d3d3;
+  --label-color: rgba(0, 0, 0, 1);
+  --label-text-stroke-color: rgba(255, 255, 255, 1);
 }
 
 :root.theme-dark {
@@ -23,6 +25,8 @@
   --gradient-start: #007f0c;
   --gradient-end: #004306;
   --stripe-color: #000;
+  --label-color: rgba(0, 204, 20, 1);
+  --label-text-stroke-color: rgba(0, 0, 0, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +38,8 @@
     --gradient-start: #007f0c;
     --gradient-end: #004306;
     --stripe-color: #000;
+    --label-color: rgba(0, 204, 20, 1);
+    --label-text-stroke-color: rgba(0, 0, 0, 1);
   }
 }
 
@@ -46,5 +52,7 @@
     --gradient-start: #e7e7e7;
     --gradient-end: #1a1a1a;
     --stripe-color: #d3d3d3;
+    --label-color: rgba(0, 0, 0, 1);
+    --label-text-stroke-color: rgba(255, 255, 255, 1);
   }
 }
