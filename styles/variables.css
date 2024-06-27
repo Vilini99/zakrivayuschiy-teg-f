@@ -1,9 +1,45 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --font-main: 'Inter', sans-serif;
-  --font-accent: 'PressStart2P', cursive;
+  --font-accent: 'PressStart2P', system-ui;
   --font-weight-body-light: 400;
   --font-weight-body-dark: 465;
   --font-weight-heading-light: 700;
   --font-weight-heading-dark: 785;
+  --background-color-light: rgba(255, 255, 255, 1);
+  --accent-color-light: rgba(0, 0, 0, 1);
+  --background-color-dark: rgba(0, 0, 0, 1);
+  --accent-color-dark: rgba(0, 204, 20, 1);
+  --background-image-light: repeating-linear-gradient(
+      to right,
+      var(--stripe-color),
+      var(--stripe-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--stripe-color),
+      var(--stripe-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gradient-start) 0.01%,
+      var(--gradient-end) 100%
+    );
+  --background-image-dark: repeating-linear-gradient(
+      to right,
+      var(--stripe-color),
+      var(--stripe-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--stripe-color),
+      var(--stripe-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
 }

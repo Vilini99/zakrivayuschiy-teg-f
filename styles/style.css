@@ -17,31 +17,13 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-
   font-family: var(--font-main);
-  font-weight: var(--font-weight-body-light);
-  font-variation-settings: 'wght' var(--font-weight-body-light);
+  font-weight: var(--font-weight-body);
+  font-variation-settings: 'wght' var(--font-weight-body);
   background-color: var(--background-color);
   color: var(--accent-color);
 
-  background-image: repeating-linear-gradient(
-      to right,
-      var(--stripe-color),
-      var(--stripe-color) 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      var(--stripe-color),
-      var(--stripe-color) 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    linear-gradient(
-      to bottom,
-      var(--gradient-start) 0.01%,
-      var(--gradient-end) 100%
-    );
+  background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
 
@@ -59,16 +41,17 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: #ffffff;
+  background: var(--background-color);
   min-height: 368px;
-  border: 2px solid #000000;
+  border: 2px solid var(--accent-color);
   margin-bottom: 100px;
 }
 
 .html-logo {
-  max-width: 455px;
   padding-bottom: 20px;
-  fill: var(--accent-color);
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight-body);
+  font-size: 65px;
 }
 
 .html-logo path {
@@ -77,7 +60,7 @@
 
 .title {
   font-family: var(--font-accent);
-  font-weight: var(--font-weight-body-light);
+  font-weight: var(--font-weight-body);
   font-size: 23px;
   text-transform: uppercase;
   padding-bottom: 25px;
@@ -121,14 +104,14 @@
 }
 
 .card {
-  background: #ffffff;
+  background: var(--background-color);
   margin-bottom: 50px;
-  border: 2px solid #000000;
+  border: 2px solid var(--accent-color);
 }
 
 .card__title {
   font-family: var(--font-main);
-  font-weight: var(--font-weight-heading-light);
+  font-variation-settings: 'wght' var(--font-weight-heading-light);
   font-size: 18px;
   line-height: 22px;
   padding-bottom: 2px;
@@ -155,7 +138,9 @@
 .image-wrapper {
   position: relative;
   text-align: center;
-  border: 2px solid #000000;
+  border: 2px solid var(--accent-color);
+  border-left: none;
+  border-right: none;
 }
 
 .image-wrapper img {
