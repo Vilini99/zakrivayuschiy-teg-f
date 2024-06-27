@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -22,11 +21,9 @@
   font-variation-settings: 'wght' var(--font-weight-body);
   background-color: var(--background-color);
   color: var(--accent-color);
-
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-
   display: flex;
   justify-content: center;
 }
@@ -42,27 +39,27 @@
   flex-direction: column;
   justify-content: center;
   background: var(--background-color);
-  min-height: 368px;
   border: 2px solid var(--accent-color);
   margin-bottom: 100px;
+  padding-top: clamp(120px, 6.346rem + 4.923vw, 136px);
 }
 
 .html-logo {
   padding-bottom: 20px;
   font-family: var(--font-accent);
   font-weight: var(--font-weight-body);
-  font-size: 65px;
-}
-
-.html-logo path {
-  fill: var(--accent-color);
+  font-size: clamp(49px, 1.909rem + 4.923vw, 65px);
 }
 
 .title {
   font-family: var(--font-accent);
   font-weight: var(--font-weight-body);
-  font-size: 23px;
+  font-size: clamp(14px, 0.226rem + 2.769vw, 23px);
   text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.theme-menu {
   padding-bottom: 25px;
 }
 
@@ -70,27 +67,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-}
-
-.theme-menu__item {
-  position: relative;
-}
-
-.theme-menu__item:active,
-.theme-menu__item:hover {
-  opacity: 0.6;
-}
-
-.theme-menu__item:active:before {
-  content: url(/svg/▶.svg);
-  position: absolute;
-  width: 14px;
-  height: 14px;
-}
-
-.theme-menu__item:focus,
-.theme-menu__item:focus-visible {
-  outline: none;
 }
 
 .theme-menu__button {
@@ -101,6 +77,25 @@
   font-size: 14px;
   text-transform: uppercase;
   padding-left: 15px;
+  position: relative;
+}
+
+.theme-menu__button:disabled,
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus,
+.theme-menu__button:focus-visible {
+  outline: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: '\25B6';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
 }
 
 .card {
@@ -114,7 +109,7 @@
   font-variation-settings: 'wght' var(--font-weight-heading-light);
   font-size: 18px;
   line-height: 22px;
-  padding-bottom: 2px;
+  padding: 3px 24px 3px 10px;
 }
 
 .text-block {
@@ -127,12 +122,6 @@
 
 .text-block__paragraph {
   padding-bottom: 27px;
-}
-
-@media (max-width: 375px) {
-  .header {
-    min-height: 327px;
-  }
 }
 
 .image-wrapper {
@@ -201,61 +190,45 @@
   }
 }
 
-.card__like-button {
-  background: none;
-  border: none;
-  color: var(--text-color);
-  padding: 5px 10px;
-  cursor: pointer;
+.like-block {
   display: flex;
-  align-items: center;
-  margin-top: 10px;
-  position: relative;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 25px 25px 0;
 }
 
 .card__icon-button {
   background: none;
   border: none;
-  padding: 0;
-  margin-right: 5px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
 }
 
-.like-icon {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: var(--text-color);
-  stroke-width: 2;
-  transition: transform 0.3s ease, fill 0.3s ease;
-}
-
-.like-icon.is-liked .heart-path {
-  fill: red;
-  stroke: none;
-}
-
-.card__icon-button:active .like-icon {
-  transform: scale(1.5);
-}
-
-.button__text {
-  display: inline-block;
-}
-
-@supports (-webkit-text-stroke: 1px var(--border-color)) {
-  h2,
-  p,
-  .card__like-button {
-    -webkit-text-stroke: 1px var(--border-color);
-  }
-}
-
-h2,
-p,
 .card__like-button {
-  text-shadow: 1px 1px var(--border-color), -1px -1px var(--border-color),
-    -1px 1px var(--border-color), 1px -1px var(--border-color);
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  padding: 12.5px 37px;
+  border: 2px solid var(--accent-color);
+}
+
+.floppy-image {
+  stroke: var(--accent-color);
+  width: 21px;
+  height: 21px;
+}
+
+.save-block {
+  margin-bottom: 103px;
+  display: flex;
+  justify-content: center;
+}
+
+.button__save-block {
+  background: var(--background-color);
+}
+
+@media (max-width: 375px) {
+  .header {
+    min-height: 327px;
+  }
 }
