@@ -124,15 +124,6 @@
   animation: moveArrow 0.5s ease-in-out infinite alternate;
 }
 
-@keyframes moveArrow {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(4px);
-  }
-}
-
 .card {
   background: var(--background-color);
   margin-bottom: 50px;
@@ -148,8 +139,7 @@
 }
 
 .text-block {
-  padding: 25px;
-  padding-bottom: 0;
+  padding: 25px 25px 0 25px;
   font-family: var(--font-main);
   font-weight: var(--font-weight-heading);
   font-size: 18px;
@@ -169,10 +159,10 @@
 }
 
 .image-wrapper img {
-  max-height: 696px;
-  display: block;
+  height: 696px;
   aspect-ratio: 1 / 1;
   inline-size: 100%;
+  display: block;
 }
 
 .image-blur {
@@ -230,7 +220,6 @@
 .like-block {
   display: flex;
   justify-content: flex-end;
-  padding-top: 5px;
   align-items: center;
 }
 
@@ -310,28 +299,6 @@
   animation: sparkAnimation 0.3s ease-in 0.3s forwards;
 }
 
-@keyframes scaleHeart {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparkAnimation {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 .card__like-button {
   position: relative;
   background: none;
@@ -379,7 +346,7 @@
 }
 
 .floppy-image {
-  stroke: var(--text-button);
+  color: var(--text-button);
   width: 21px;
   aspect-ratio: 1 / 1;
   position: relative;
@@ -447,6 +414,7 @@
   font-size: 14px;
   line-height: 150%;
   color: var(--accent-color);
+  padding-inline-start: 10px;
 }
 
 .modal-submit-button {
@@ -457,12 +425,30 @@
   border: solid 2px var(--accent-color);
 }
 
-@media (max-width: 375px) {
+@media (width <= 376px) {
   .header {
     min-height: 327px;
   }
 
   .image-wrapper img {
     max-height: 371px;
+  }
+
+  .text-block {
+    padding: 26px 26px 0 26px;
+  }
+
+  .button__save-block {
+    flex-direction: column;
+    justify-content: space-evenly;
+    block-size: 80px;
+  }
+
+  .floppy-image {
+    width: 28px;
+  }
+
+  .modal-save-text {
+    padding-inline-start: 22px;
   }
 }
