@@ -16,6 +16,8 @@
   --label-color: rgba(0, 0, 0, 1);
   --label-text-stroke-color: rgba(255, 255, 255, 1);
   --background-image: var(--background-image-light);
+  --text-button: var(--text-button-light);
+  --contour-heart-color: var(--contour-heart-color-light);
 }
 
 :root.theme-dark {
@@ -29,6 +31,8 @@
   --label-color: rgba(0, 204, 20, 1);
   --label-text-stroke-color: rgba(0, 0, 0, 1);
   --background-image: var(--background-image-dark);
+  --text-button: var(--text-button-dark);
+  --contour-heart-color: var(--contour-heart-color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +47,8 @@
     --label-color: rgba(0, 204, 20, 1);
     --label-text-stroke-color: rgba(0, 0, 0, 1);
     --background-image: var(--background-image-dark);
+    --text-button: var(--text-button-dark);
+    --contour-heart-color: var(--contour-heart-color-dark);
   }
 }
 
@@ -58,5 +64,7 @@
     --label-color: rgba(0, 0, 0, 1);
     --label-text-stroke-color: rgba(255, 255, 255, 1);
     --background-image: var(--background-image-dark);
+    --text-button: var(--text-button-light);
+    --contour-heart-color: var(--contour-heart-color-light);
   }
 }

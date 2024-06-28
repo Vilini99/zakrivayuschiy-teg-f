@@ -7,9 +7,15 @@
   --font-weight-heading-light: 700;
   --font-weight-heading-dark: 785;
   --background-color-light: rgba(255, 255, 255, 1);
-  --accent-color-light: rgba(0, 0, 0, 1);
   --background-color-dark: rgba(0, 0, 0, 1);
+  --accent-color-light: rgba(0, 0, 0, 1);
   --accent-color-dark: rgba(0, 204, 20, 1);
+  --text-button-light: rgba(255, 255, 255, 1);
+  --text-button-dark: rgba(0, 204, 20, 1);
+  --contour-heart-color-light: rgba(0, 0, 0, 1);
+  --contour-heart-color-dark: rgba(0, 204, 20, 1);
+  --body-heart-color: red;
+
   --background-image-light: repeating-linear-gradient(
       to right,
       var(--stripe-color),
@@ -28,6 +34,7 @@
       var(--gradient-start) 0.01%,
       var(--gradient-end) 100%
     );
+
   --background-image-dark: repeating-linear-gradient(
       to right,
       var(--stripe-color),
