@@ -41,6 +41,7 @@
   background: var(--background-color);
   border: 2px solid var(--accent-color);
   margin-bottom: 100px;
+  margin-top: 100px;
   padding-top: clamp(120px, 6.346rem + 4.923vw, 136px);
 }
 
@@ -56,17 +57,18 @@
   font-weight: var(--font-weight-body);
   font-size: clamp(14px, 0.226rem + 2.769vw, 23px);
   text-transform: uppercase;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
 }
 
 .theme-menu {
   padding-bottom: 25px;
+  padding-left: 20px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
 }
 
 .theme-menu__button {
@@ -147,6 +149,7 @@
 
 .text-block {
   padding: 25px;
+  padding-bottom: 0;
   font-family: var(--font-main);
   font-weight: var(--font-weight-heading);
   font-size: 18px;
@@ -166,7 +169,7 @@
 }
 
 .image-wrapper img {
-  max-height: 693px;
+  max-height: 696px;
   display: block;
   aspect-ratio: 1 / 1;
   inline-size: 100%;
@@ -202,7 +205,7 @@
 
 .label {
   position: absolute;
-  top: 10px;
+  top: 27px;
   right: 20px;
   mix-blend-mode: hard-light;
   font-family: var(--font-accent);
@@ -227,8 +230,7 @@
 .like-block {
   display: flex;
   justify-content: flex-end;
-  gap: 19px;
-  padding: 0 25px 25px 0;
+  padding-top: 5px;
   align-items: center;
 }
 
