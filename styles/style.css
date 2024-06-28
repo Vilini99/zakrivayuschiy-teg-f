@@ -166,21 +166,22 @@
 }
 
 .image-wrapper img {
-  width: 100%;
-  height: auto;
+  max-height: 693px;
   display: block;
+  aspect-ratio: 1 / 1;
+  inline-size: 100%;
 }
 
 .image-blur {
-  filter: blur(15px);
+  filter: blur(1px);
 }
 
 .image-invert {
-  filter: invert(85%);
+  filter: invert(10%);
 }
 
 .image-sepia {
-  filter: sepia(0.9);
+  filter: sepia(0.1);
 }
 
 .image-hue-rotate {
@@ -188,15 +189,15 @@
 }
 
 .image-saturate {
-  filter: saturate(400%);
+  filter: saturate(200%);
 }
 
 .image-grayscale {
-  filter: grayscale(80%);
+  filter: grayscale(30%);
 }
 
 .image-mix {
-  filter: hue-rotate(80deg) invert(25%) blur(2px);
+  filter: hue-rotate(10deg) invert(5%);
 }
 
 .label {
@@ -457,5 +458,9 @@
 @media (max-width: 375px) {
   .header {
     min-height: 327px;
+  }
+
+  .image-wrapper img {
+    max-height: 371px;
   }
 }
