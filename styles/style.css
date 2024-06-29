@@ -139,7 +139,7 @@
   font-variation-settings: 'wght' var(--font-weight-heading);
   font-size: 18px;
   line-height: 22px;
-  padding: 3px 24px 3px 10px;
+  padding: 5px 24px 5px 10px;
 }
 
 .text-block {
@@ -154,6 +154,10 @@
   padding-bottom: 27px;
 }
 
+.text-block__paragraph:nth-child(2) {
+  padding-bottom: 0;
+}
+
 .image-wrapper {
   position: relative;
   border: 2px solid var(--accent-color);
@@ -162,6 +166,7 @@
 }
 
 .image-wrapper img {
+  height: 100%;
   aspect-ratio: 1 / 1;
   inline-size: 100%;
   display: block;
@@ -231,11 +236,11 @@
   border: none;
   cursor: pointer;
   height: 38px;
+  transition: outline-color 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-  transition: outline-color 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -243,8 +248,8 @@
 }
 
 .sparks {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  fill: none;
+  transition: fill 0.3s ease;
 }
 
 .heart {
@@ -253,7 +258,7 @@
 }
 
 .contour {
-  transition: stroke 0.1s linear;
+  transition: fill 0.1s linear;
 }
 
 .main-body {
@@ -267,44 +272,40 @@
 }
 
 .heart:hover .main-body {
-  transition: fill 0.3s linear 0s;
+  transition-delay: 0.05s;
   fill: var(--contour-heart-color);
 }
 
 .heart:hover .core {
-  transition: fill 0.3s linear 0.03s;
+  transition-delay: 0s;
   fill: var(--contour-heart-color);
 }
 
 .heart:active .main-body {
-  transition: fill 0.3s ease 0.05s;
   fill: var(--body-heart-color);
 }
 
 .heart:active .core {
-  transition: fill 0.3s ease 0.3s;
   fill: var(--body-heart-color);
 }
 
 .like-icon.is-liked .heart path {
   fill: var(--body-heart-color);
-  animation: scaleHeart 0.3s ease-in 0.1s forwards;
+  animation: scaleHeart 0.3s ease-in 0.1s;
   transform-origin: 50%;
 }
 
 .like-icon.is-liked .contour {
-  stroke: var(--body-heart-color);
-  transition-delay: 0.06s;
+  transition: fill 0.06s;
 }
 
 .like-icon.is-liked .sparks {
-  opacity: 1;
-  animation: sparkAnimation 0.3s ease-in 0.3s forwards;
+  animation: sparkAnimation 0.3s 0.3s ease-in;
 }
 
 .plain-button {
   position: relative;
-  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s, transform 0.3s;
   cursor: pointer;
   overflow: hidden;
 }
