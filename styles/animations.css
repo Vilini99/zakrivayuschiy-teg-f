@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -44,4 +43,76 @@
   100% {
     fill: transparent;
   }
+}
+
+.sparks {
+  fill: none;
+  transition: fill 0.3s ease;
+}
+
+.heart {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear 0s;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.heart:hover .main-body {
+  transition-delay: 0.05s;
+  fill: var(--contour-heart-color);
+}
+
+.heart:hover .core {
+  transition-delay: 0s;
+  fill: var(--contour-heart-color);
+}
+
+.heart:active .main-body {
+  fill: var(--body-heart-color);
+}
+
+.heart:active .core {
+  fill: var(--body-heart-color);
+}
+
+.like-icon.is-liked .heart path {
+  fill: var(--body-heart-color);
+  animation: scaleHeart 0.3s ease-in 0.1s;
+  transform-origin: 50%;
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.06s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparkAnimation 0.3s 0.3s ease-in;
+}
+
+.card__icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 38px;
+  transition: outline-color 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+}
+
+.card__icon-button:focus {
+  outline: none;
 }

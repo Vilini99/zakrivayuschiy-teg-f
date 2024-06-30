@@ -231,98 +231,31 @@
   align-items: center;
 }
 
-.card__icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  height: 38px;
-  transition: outline-color 0.3s ease;
-}
-
-.card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.sparks {
-  fill: none;
-  transition: fill 0.3s ease;
-}
-
-.heart {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.contour {
-  transition: fill 0.1s linear;
-}
-
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear 0s;
-}
-
-.core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.03s;
-}
-
-.heart:hover .main-body {
-  transition-delay: 0.05s;
-  fill: var(--contour-heart-color);
-}
-
-.heart:hover .core {
-  transition-delay: 0s;
-  fill: var(--contour-heart-color);
-}
-
-.heart:active .main-body {
-  fill: var(--body-heart-color);
-}
-
-.heart:active .core {
-  fill: var(--body-heart-color);
-}
-
-.like-icon.is-liked .heart path {
-  fill: var(--body-heart-color);
-  animation: scaleHeart 0.3s ease-in 0.1s;
-  transform-origin: 50%;
-}
-
-.like-icon.is-liked .contour {
-  transition: fill 0.06s;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparkAnimation 0.3s 0.3s ease-in;
-}
-
 .plain-button {
   position: relative;
   transition: box-shadow 0.3s, transform 0.3s;
   cursor: pointer;
   overflow: hidden;
+  border: 2px solid var(--accent-color);
+  background: none;
 }
 
 .card__like-button {
-  background: none;
   font-family: var(--font-accent);
   margin-block: 25px;
   margin-inline-end: 25px;
-  border: 2px solid var(--accent-color);
   inline-size: 130px;
   block-size: 38px;
 }
 
+.modal-submit-button {
+  inline-size: 293px;
+  block-size: 38px;
+  grid-column-end: span 2;
+}
+
 .button__save-block {
   background: var(--background-color);
-  overflow: hidden;
   display: flex;
   align-items: center;
   padding: 15px 20px;
@@ -405,21 +338,9 @@
   padding-inline-start: 10px;
 }
 
-.modal-submit-button {
-  inline-size: 293px;
-  block-size: 38px;
-  grid-column-end: span 2;
-  background-color: transparent;
-  border: solid 2px var(--accent-color);
-}
-
 @media (width <= 376px) {
   .header {
     min-height: 327px;
-  }
-
-  .image-wrapper {
-    height: 371px;
   }
 
   .text-block {
