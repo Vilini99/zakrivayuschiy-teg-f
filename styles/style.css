@@ -252,6 +252,7 @@
   inline-size: 293px;
   block-size: 38px;
   grid-column-end: span 2;
+  text-transform: uppercase;
 }
 
 .button__save-block {
